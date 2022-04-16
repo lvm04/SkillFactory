@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Ирина Соколова</Name>
+  <Address>г. Васюки, ул. Попова, д.2</Address>
+  <Phone>33-22-11</Phone>
+</Employee>
