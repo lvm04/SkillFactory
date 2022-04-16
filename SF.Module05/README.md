@@ -1,5 +1,5 @@
 # 5.6. Итоговый проект
-![Результат](/img/module5_result.png)
+![Результат](/SkillFactory/img/module5_result.png)
 
 ### Задание:
 
