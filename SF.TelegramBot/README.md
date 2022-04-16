@@ -24,11 +24,11 @@ _/addword_ - добавить слово
 */deleteword <слово>* - удалить слово  
 */dictionary* - отобразить все сохраненные слова  
 
-![Результат 1](/img/dictionary.png)  
+![Результат 1](/SF.TelegramBot/img/dictionary.png)  
 _/addwordatonce рус_слово,eng_word,тема_ - добавить слово за один раз  
 */training* - запуск тренировки  
 
-![Результат 2](/img/traning.png)  
+![Результат 2](/SF.TelegramBot/img/traning.png)  
 */stop* - остановить тренировку  
 */poembuttons* - кнопки с поэтами  
 */saymehi* - привет!  

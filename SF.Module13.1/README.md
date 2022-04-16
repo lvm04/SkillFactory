@@ -4,7 +4,7 @@
 
 На примере этого [текста](https://lms.skillfactory.ru/assets/courseware/v1/dc9cf029ae4d0ae3ab9e490ef767588f/asset-v1:SkillFactory+CSHARP+2020+type@asset+block/Text1.txt), выясните, какие будут различия между этими коллекциями.  
 
-![Результат](/img/Module13_6_1.png)
+![Результат](/SF.Module13.1/img/Module13_6_1.png)
 
 
 
