@@ -1,0 +1,40 @@
+﻿@model SF.Module35.ViewModels.Account.SearchViewModel;
+
+
+<div class="block-reg background-white">
+
+    @if (Model.UserList.Count != 0)
+    {
+        @foreach (var user in @Model.UserList)
+        {
+            <div class="card" style="width: 10rem; margin: 1rem; display: inline-block;">
+                <img src="@user.Image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@user.GetFullName()</h5>
+                    <p class="card-text">@user.About</p>
+                    @if (!@user.IsFriendWithCurrent)
+                    {
+                        <p>Статус: Не друг</p>
+                        <form asp-controller="AccountManager" asp-action="AddFriend" asp-route-id="@user.Id" method="post">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Добавить в друзья
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <p>Статус: Друг</p>
+                    }
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            <label> Поиск не дал результатов.</label>
+        </div>
+    }
+
+
+</div>

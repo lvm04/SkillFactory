@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<User> SignInManager;
+@inject UserManager<User> UserManager;
+
+@model SF.Module35.ViewModels.Account.MainViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (!SignInManager.IsSignedIn(User))
+{
+    <div class="row">
+        <div class="side">
+            <div class="center">
+                Пользуйтесь нашей самой крутой соцсетью! Регистрируйтесь всего за 2 минуты, делитесь мыслями, находите новых друзей.
+            </div>
+            <img class="main-img" src="~/lemur.png" /> <br>
+             Посторонним вход запрещен!
+        </div>
+
+        <div class="main">
+            <partial name="Login" model="@Model.LoginView" />
+            <partial name="Register" model="@Model.RegisterView"/>
+        </div>
+
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

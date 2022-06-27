@@ -1,0 +1,34 @@
+@model IEnumerable<Request>
+@{
+    ViewData["Title"] = "Запросы";
+}
+
+<h4 class="text-center">Запросы</h4>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Дата</th>
+                        <th scope="col">URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int n = 1; }
+                    @foreach (var request in Model)
+                    {
+                        <tr>
+                            <td>@n</td>
+                            <td>@request.Date</td>
+                            <td>@request.Url</td>
+                        </tr>
+                        n++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model SF.Module35.ViewModels.Account.ChatViewModel;
+
+<div class="block-reg background-white">
+    <div>
+        <form method="get" asp-controller="AccountManager" asp-action="MyPage">
+            <input class="enter_submit" type="submit" value="Назад" />
+        </form>
+    </div>
+
+    <h4 class="center">Чат @Model.You.FirstName и @Model.ToWhom.FirstName</h4>
+
+    <div id="msgHistory" class="lined-block">
+        <label class="gray-text">Сообщения</label>
+
+        @*if (Model.History.Count != 0)
+        {
+
+            @foreach (var message in @Model.History)
+            {
+                <div>
+                    <label> @message.Sender.FirstName:</label>
+                    @message.Text
+                </div>
+            }
+        }
+        else
+        {
+            <div>
+                <label> У вас пока нет сообщений с  @Model.ToWhom.GetFullName().</label>
+            </div>
+        }*@
+
+
+    </div>
+
+    <div class="lined-block">
+        <label class="gray-text">Новое сообщение</label>
+
+        <div id="sendForm">
+            <input name="friendId" type="hidden" value="@Model.ToWhom.Id"/>
+            <div class="mrgn">
+                <input name="msgText" class="form-control emojify" type="text" />
+            </div>
+            <div class="center">
+                <input class="btn_submit" type="submit" value="Отправить" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/chat.js" asp-append-version="true"></script>
